@@ -54,6 +54,12 @@ In addition to those, there are the following properties you can access as well:
 *   `label`: The label right below the progress bar.
 *   `imageView`: The image view of the alert.
 
+
+## Integrating GTAlertCollection
+
+To integrate `GTAlertCollection` in your project and start using it, just clone or download the repository, and drag-n-drop the *GTAlertCollection.swift* from the Sources folder file into your project.
+
+
 ## Using GTAlertCollection
 
 There is one requirement before we start using any of the `GTAlertCollection` methods; to specify the *host view controller*, meaning the view controller where the alert controller will be presented to. This can be done in two ways, depending on how we are planning to `GTAlertCollection`:
