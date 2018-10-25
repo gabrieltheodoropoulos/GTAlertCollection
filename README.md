@@ -1,5 +1,7 @@
 # GTAlertCollection
 
+![](https://gtiapps.com/wp-content/uploads/2018/10/gtalertcollection_cover3.png)
+
 `UIAlertController` is a default iOS SDK controller that we all use in our applications from time to time. Presenting such a controller is not a difficult task at all, but there are a few disadvantages coming with it:
 
 1.  It's boring and totally anti-productive to write almost identical code multiple times.
