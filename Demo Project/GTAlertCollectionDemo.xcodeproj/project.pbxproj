@@ -12,10 +12,10 @@
 		C0302AF6217DD2C4003304BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0302AF4217DD2C4003304BA /* Main.storyboard */; };
 		C0302AF8217DD2C9003304BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0302AF7217DD2C9003304BA /* Assets.xcassets */; };
 		C0302AFB217DD2C9003304BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0302AF9217DD2C9003304BA /* LaunchScreen.storyboard */; };
-		C0302B03217DD2E5003304BA /* GTAlertCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0302B02217DD2E5003304BA /* GTAlertCollection.swift */; };
 		C0302B05217DD482003304BA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0302B04217DD482003304BA /* CustomCell.swift */; };
 		C0302B07217DD494003304BA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0302B06217DD494003304BA /* CustomCell.xib */; };
 		C086F2BE217F2E7E00B3F0E8 /* iron_man.png in Resources */ = {isa = PBXBuildFile; fileRef = C086F2BD217F2E7E00B3F0E8 /* iron_man.png */; };
+		C0FEF03D2267723F0080D71D /* GTAlertCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEF03C2267723F0080D71D /* GTAlertCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		C0302AF7217DD2C9003304BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0302AFA217DD2C9003304BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0302AFC217DD2C9003304BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0302B02217DD2E5003304BA /* GTAlertCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTAlertCollection.swift; sourceTree = "<group>"; };
 		C0302B04217DD482003304BA /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C0302B06217DD494003304BA /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		C086F2BD217F2E7E00B3F0E8 /* iron_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iron_man.png; sourceTree = "<group>"; };
+		C0FEF03C2267723F0080D71D /* GTAlertCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAlertCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		C0302AEF217DD2C3003304BA /* GTAlertCollectionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C0302B02217DD2E5003304BA /* GTAlertCollection.swift */,
+				C0FEF03C2267723F0080D71D /* GTAlertCollection.swift */,
 				C0302B04217DD482003304BA /* CustomCell.swift */,
 				C0302B06217DD494003304BA /* CustomCell.xib */,
 				C0302AF0217DD2C3003304BA /* AppDelegate.swift */,
@@ -150,9 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0302AF3217DD2C3003304BA /* ViewController.swift in Sources */,
+				C0FEF03D2267723F0080D71D /* GTAlertCollection.swift in Sources */,
 				C0302AF1217DD2C3003304BA /* AppDelegate.swift in Sources */,
 				C0302B05217DD482003304BA /* CustomCell.swift in Sources */,
-				C0302B03217DD2E5003304BA /* GTAlertCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

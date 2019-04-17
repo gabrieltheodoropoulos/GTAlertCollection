@@ -40,30 +40,30 @@ import UIKit
 /// *   Alert controller with an image view
 ///
 /// See more on [GitHub](https://github.com/gabrieltheodoropoulos/gtalertcollection)
-class GTAlertCollection: NSObject {
+open class GTAlertCollection: NSObject {
 
     // MARK: - Properties
     
     /// The `GTAlertCollection` shared instance.
-    static let shared = GTAlertCollection()
+    public static let shared = GTAlertCollection()
     
     /// The presented alert controller.
-    var alertController: UIAlertController!
+    public var alertController: UIAlertController!
     
     /// The view controller that the alert controller is presented to.
-    var hostViewController: UIViewController!
+    public var hostViewController: UIViewController!
     
     /// The activity indicator of the alert.
-    var activityIndicator: UIActivityIndicatorView!
+    public var activityIndicator: UIActivityIndicatorView!
     
     /// The `UIProgressView` object that displays the progress bar.
-    var progressBar: UIProgressView!
+    public var progressBar: UIProgressView!
     
     /// The label right below the progress bar.
-    var label: UILabel!
+    public var label: UILabel!
     
     /// The image view of the alert.
-    var imageView: UIImageView!
+    public var imageView: UIImageView!
     
     
     
@@ -75,7 +75,7 @@ class GTAlertCollection: NSObject {
     /// using the shared instance.
     ///
     /// - Parameter hostViewController: The view controller that will present the alert controller.
-    init(withHostViewController hostViewController: UIViewController) {
+    public init(withHostViewController hostViewController: UIViewController) {
         super.init()
         self.hostViewController = hostViewController
     }
@@ -163,7 +163,7 @@ class GTAlertCollection: NSObject {
     /// It dismisses the alert controller.
     ///
     /// - Parameter completion: If the `completion` is not `nil`, it's called to notify that the alert has been dismissed.
-    func dismissAlert(completion: (() -> Void)?) {
+    public func dismissAlert(completion: (() -> Void)?) {
         DispatchQueue.main.async { [unowned self] in
             if let alertController = self.alertController {
                 alertController.dismiss(animated: true) {
@@ -190,7 +190,7 @@ class GTAlertCollection: NSObject {
     ///   - message: The optional message of the alert.
     ///   - buttonTitle: The action button title. Required.
     ///   - actionHandler: It's called when the action button is tapped by the user. Use it to implement the required logic after the user has tapped on your alert's button.
-    func presentSingleButtonAlert(withTitle title: String?, message: String?, buttonTitle: String, actionHandler: @escaping () -> Void) {
+    public func presentSingleButtonAlert(withTitle title: String?, message: String?, buttonTitle: String, actionHandler: @escaping () -> Void) {
         // Check if the hostViewController has been set.
         if let hostVC = hostViewController {
             // Perform all actions on the main thread.
@@ -235,7 +235,7 @@ class GTAlertCollection: NSObject {
     ///   - cancelButtonIndex: If there's a *Cancel-styled* button you want to exist among buttons, then here's the place where you specify it's **position** in the `buttonTitles` array. Pass `nil` if there's no Cancel-styled button.
     ///   - destructiveButtonIndices: An array with the **position** of one or more *destructive* buttons in the collection of buttons. Pass `nil` if you have no destructive buttons to show.
     ///   - actionHandler: Use this block to determine which action button was tapped by the user. An `actionIndex` value provides you with that information.
-    func presentAlert(withTitle title: String?, message: String?, buttonTitles: [String], cancelButtonIndex: Int?, destructiveButtonIndices: [Int]?, actionHandler: @escaping (_ actionIndex: Int) -> Void) {
+    public func presentAlert(withTitle title: String?, message: String?, buttonTitles: [String], cancelButtonIndex: Int?, destructiveButtonIndices: [Int]?, actionHandler: @escaping (_ actionIndex: Int) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Perform all operations on the main thread.
@@ -271,7 +271,7 @@ class GTAlertCollection: NSObject {
     ///   - message: The optional message of the alert.
     ///   - presentationCompletion: Called after the alert controller has been presented or when the `hostViewController` is `nil`, and indicates whether the alert controller was presented successfully or not.
     ///   - success: When `true` the alert controller has been successfully presented to the host view controller, otherwise it's `false`.
-    func presentButtonlessAlert(withTitle title: String?, message: String?, presentationCompletion: @escaping (_ success: Bool) -> Void) {
+    public func presentButtonlessAlert(withTitle title: String?, message: String?, presentationCompletion: @escaping (_ success: Bool) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Operate on the main thread.
@@ -323,7 +323,7 @@ class GTAlertCollection: NSObject {
     ///   - showLargeIndicator: Pass `true` when you want to use the large indicator style, `false` when you want to display the small one. Default value is `false`.
     ///   - presentationCompletion: Called after the alert controller has been presented or when the `hostViewController` is `nil`, and indicates whether the alert controller was presented successfully or not.
     ///   - success: When `true` the alert controller has been successfully presented to the host view controller, otherwise it's `false`.
-    func presentActivityAlert(withTitle title: String?, message: String?, activityIndicatorColor: UIColor = UIColor.black, showLargeIndicator: Bool = false, presentationCompletion: @escaping (_ success: Bool) -> Void) {
+    public func presentActivityAlert(withTitle title: String?, message: String?, activityIndicatorColor: UIColor = UIColor.black, showLargeIndicator: Bool = false, presentationCompletion: @escaping (_ success: Bool) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Operate on the main thread.
@@ -411,7 +411,7 @@ class GTAlertCollection: NSObject {
     ///   - didFinishConfiguration: Calling this closure from your code is **mandatory**. You do that after having configured the text field. If you don't make any configuration, call it directly in the `configurationHandler` closure.
     ///   - textField: The single text field of the alert. Be careful with it and always unwrap it before using it, as it can be `nil`.
     ///   - editedTextField: The single text field of the alert as returned when the Done button gets tapped. Always unwrap it before using it as it might be `nil`.
-    func presentSingleTextFieldAlert(withTitle title: String?, message: String?, doneButtonTitle: String = "Done", cancelButtonTitle: String = "Cancel", configurationHandler: @escaping (_ textField: UITextField?, _ didFinishConfiguration: () -> Void) -> Void, completionHandler: @escaping (_ editedTextField: UITextField?) -> Void) {
+    public func presentSingleTextFieldAlert(withTitle title: String?, message: String?, doneButtonTitle: String = "Done", cancelButtonTitle: String = "Cancel", configurationHandler: @escaping (_ textField: UITextField?, _ didFinishConfiguration: () -> Void) -> Void, completionHandler: @escaping (_ editedTextField: UITextField?) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Work on the main thread.
@@ -508,7 +508,7 @@ class GTAlertCollection: NSObject {
     ///   - didFinishConfiguration: Calling this closure from your code is **mandatory**. You do that after having configured the textfields. If you don't make any configuration, call it directly in the `configurationHandler` closure.
     ///   - textFields: The collection of the text fields in the alert. Be careful with it and always unwrap it before using it, as it can be `nil`.
     ///   - editedTextFields: The collection of the text fields in the alert as they're at the moment the Done button gets tapped. Always unwrap it before using it as it might be `nil`.
-    func presentMultipleTextFieldsAlert(withTitle title: String?, message: String?, doneButtonTitle: String = "Done", cancelButtonTitle: String = "Cancel", numberOfTextFields: Int, configurationHandler: @escaping (_ textFields: [UITextField]?, _ didFinishConfiguration: () -> Void) -> Void, completionHandler: @escaping (_ editedTextFields: [UITextField]?) -> Void) {
+    public func presentMultipleTextFieldsAlert(withTitle title: String?, message: String?, doneButtonTitle: String = "Done", cancelButtonTitle: String = "Cancel", numberOfTextFields: Int, configurationHandler: @escaping (_ textFields: [UITextField]?, _ didFinishConfiguration: () -> Void) -> Void, completionHandler: @escaping (_ editedTextFields: [UITextField]?) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Work on the main thread.
@@ -613,7 +613,7 @@ class GTAlertCollection: NSObject {
     ///   - totalSteps: The total number of steps until the progress reaches at 100%.
     ///   - presentationCompletion: Called after the alert controller has been presented or when the `hostViewController` is `nil`, and indicates whether the alert controller was presented successfully or not.
     ///   - success: When `true` the alert controller has been successfully presented to the host view controller, otherwise it's `false`.
-    func presentProgressBarAlert(withTitle title: String?, message: String?, progressTintColor: UIColor, trackTintColor: UIColor, showPercentage: Bool, showStepsCount: Bool, updateHandler: @escaping (_ updateHandler: @escaping (_ currentStep: Int, _ totalSteps: Int) -> Void) -> Void, presentationCompletion: @escaping (_ success: Bool) -> Void) {
+    public func presentProgressBarAlert(withTitle title: String?, message: String?, progressTintColor: UIColor, trackTintColor: UIColor, showPercentage: Bool, showStepsCount: Bool, updateHandler: @escaping (_ updateHandler: @escaping (_ currentStep: Int, _ totalSteps: Int) -> Void) -> Void, presentationCompletion: @escaping (_ success: Bool) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Operate on the main thread.
@@ -746,7 +746,7 @@ class GTAlertCollection: NSObject {
     ///   - image: The image to be displayed in the image view.
     ///   - actionHandler: Use this block to determine which action button was tapped by the user. The `actionIndex` parameter provides you with that information.
     ///   - actionIndex: The index of the tapped action.
-    func presentImageViewAlert(withTitle title: String?, message: String?, buttonTitles: [String], cancelButtonIndex: Int?, destructiveButtonIndices: [Int]?, image: UIImage, actionHandler: @escaping (_ actionIndex: Int) -> Void) {
+    public func presentImageViewAlert(withTitle title: String?, message: String?, buttonTitles: [String], cancelButtonIndex: Int?, destructiveButtonIndices: [Int]?, image: UIImage, actionHandler: @escaping (_ actionIndex: Int) -> Void) {
         // Check if the host view controller has been set.
         if let hostVC = hostViewController {
             // Operate on the main thread.
