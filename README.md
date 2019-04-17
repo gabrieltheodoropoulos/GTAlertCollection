@@ -68,7 +68,7 @@ In addition, these properties are available as well:
 *   `label`: The label right below the progress bar.
 *   `imageView`: The image view of the alert.
 
-Please read the [wiki](https://github.com/gabrieltheodoropoulos/GTAlertCollection/wiki/How-To) for details on how to use `GTAlertCollection` and the various alert types. You can also find [exported documentation](https://gtiapps.com/docs/gtalertcollection/Classes/GTAlertCollection.html) by [jazzy](https://github.com/realm/jazzy).
+Please read the [wiki](https://github.com/gabrieltheodoropoulos/GTAlertCollection/wiki) for details on how to use `GTAlertCollection` and the various alert types. You can also find [exported documentation](https://gtiapps.com/docs/gtalertcollection) by [jazzy](https://github.com/realm/jazzy).
 
 ## Note
 
