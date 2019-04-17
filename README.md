@@ -1,5 +1,10 @@
 # GTAlertCollection
 
+![Platform](https://img.shields.io/cocoapods/p/GTAlertCollection.svg)
+![Language](https://img.shields.io/github/languages/top/gabrieltheodoropoulos/GTAlertCollection.svg?color=orange)
+![License](https://img.shields.io/github/license/gabrieltheodoropoulos/GTAlertCollection.svg)
+![Version](https://img.shields.io/cocoapods/v/GTAlertCollection.svg)
+
 ## About
 
 **GTAlertCollection** is a Swift component that makes it possible to *present alerts as easily as just calling a single method*.
